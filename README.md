@@ -5,7 +5,8 @@ This repository contains all the mini tasks and hands-on projects I've completed
 
 ## Mini Task
 
-- **01-gcp-vm-web server**: Set up a VM on GCP and hosted a webpage using Apache 
+- **01-gcp-vm-web server**: Set up a VM on GCP and hosted a webpage using Apache
+- (more coming soon)
 
 Each folder contains:
 - Overview
