@@ -43,4 +43,6 @@ Created and configured a Virtual Machine (VM) on Google Cloud Platform using the
  - Understanding zone, machine-type and external IP
  - Real-world feel of cloud deployment
 
-## 
+## Output Screenshot:
+ - VM webpage: (./screenshots/Screenshot 2025-06-07 092438.png)
+ - GCP VM creation: (./screenshots/Screenshot 2025-06-07 092527.png)
