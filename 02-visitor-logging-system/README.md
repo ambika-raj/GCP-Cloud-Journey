@@ -1,0 +1,65 @@
+# Task 02: Visitor Logging System using Cloud Function + Pub/Sub
+
+## Overview
+Designed and deployed a cloud-native visitor logging system using Google Cloud services. When a user visits the webpage (Tic-Tac-Toe site hosted on a GCP VM), the system logs the visit using a Cloud Function triggered by HTTP, which then publishes a message to a Pub/Sub topic.
+
+## Technologies Used
+- Google Cloud Platform (GCP)
+- Cloud Functions (Gen 2)
+- Cloud Pub/Sub
+- GCP Logging & Monitoring
+- Python 3.10
+- Compute Engine (VM) — used for website hosting
+- gcloud CLI 
+
+## What I Did: Phased Implementation 
+### Phase 1: Hosting Tic-Tac-Toe Game on VM
+- hosted a static website (Tic-Tac-Toe Game) on Apache server via a GCP VM
+- Technologies: Compute Engine, Apache2, CLI
+
+### Phase 2: Write & Deploy Cloud Function
+- Created a Python Cloud Function to capture and publish visitor info.
+- Code: main.py
+  
+`import functions_framework  
+ from google.cloud import pubsub_v1  
+ import json  
+ @functions_framework.http  
+ def publishVisitorLog(request):  
+    publisher = pubsub_v1.PublisherClient()  
+    topic_path = publisher.topic_path("tic-tac-toe-cloud-hosting", "visitor-logs")  
+    visitor_data = {  
+        "ip": request.remote_addr,  
+        "user_agent": request.headers.get("User-Agent"),  
+        "timestamp": request.headers.get("Date", "No Timestamp")  
+    }  
+    future = publisher.publish(topic_path, json.dumps(visitor_data).encode("utf-8"))  
+    return "Message published to Pub/Sub!"`  
+- Command Used for Deployment:
+ `gcloud functions deploy publishVisitorLog --runtime python310 --trigger-http --allow-unauthenticated --region=asia-south1`
+
+### Phase 3: Configure Pub/Sub
+- Created a topic manually:
+ `gcloud pubsub topics create visitor-logs`
+- Verified logs in Logs Explorer.
+
+### Phase 4: Integration Test
+- Visited webpage (or triggered function from browser):
+`https://asia-south1-tic-tac-toe-cloud-hosting.cloudfunctions.net/publishVisitorLog`
+- Verified visitor entry in Logs:
+  IP Address
+  User Agent
+  Timestamp
+
+## Output
+Web page hosted at: http://34.100.136.157/
+
+Function deployed: https://asia-south1-tic-tac-toe-cloud-hosting.cloudfunctions.net/publishVisitorLog
+
+## What I Learned
+- Writing and deploying serverless Python functions
+- Creating and triggering HTTP Cloud Functions
+- Using Pub/Sub to log messages
+- GCP Logs Explorer & debugging
+- How services interconnect in GCP
+- A basic system to simulate backend event logging
