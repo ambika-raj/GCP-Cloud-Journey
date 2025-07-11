@@ -35,6 +35,11 @@ Created and configured a Virtual Machine (VM) on Google Cloud Platform using the
 ## Output:
    Web page hosted at: http://35.244.63.149
 
+## Output Screenshot:
+ - VM webpage: <img width="2880" height="1704" alt="Screenshot 2025-06-07 092438" src="https://github.com/user-attachments/assets/d435d349-d638-4092-bec9-60240bc14523" />
+
+ - GCP VM creation: <img width="2880" height="1704" alt="Screenshot 2025-06-07 092527" src="https://github.com/user-attachments/assets/bb790b3e-41c9-4529-8f00-4c13d1c3760f" />
+
 ## What I Learned:
  - VM creation on Google cloud shell (CLI)
  - SSH and remote commands
@@ -42,7 +47,3 @@ Created and configured a Virtual Machine (VM) on Google Cloud Platform using the
  - Firewall rules and networking
  - Understanding zone, machine-type and external IP
  - Real-world feel of cloud deployment
-
-## Output Screenshot:
- - VM webpage: (./screenshots/Screenshot 2025-06-07 092438.png)
- - GCP VM creation: (./screenshots/Screenshot 2025-06-07 092527.png)
