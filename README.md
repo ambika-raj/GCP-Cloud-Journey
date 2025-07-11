@@ -27,4 +27,4 @@ Each folder contains:
 
 💡 Apply cloud concepts to real-world scenarios
 
-🎯 Become internship-ready in Cloud
+🎯 Become internship-ready in Cloud & Security
