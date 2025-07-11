@@ -52,14 +52,23 @@ Designed and deployed a cloud-native visitor logging system using Google Cloud s
   Timestamp
 
 ## Output
-Web page hosted at: http://34.100.136.157/
+Web page hosted: http://34.100.136.157/
 
-Function deployed: https://asia-south1-tic-tac-toe-cloud-hosting.cloudfunctions.net/publishVisitorLog
+## Output Screenshots
+- VM instance created: <img width="2880" height="1704" alt="VM-instances" src="https://github.com/user-attachments/assets/df471586-377d-4165-8b55-342aba5afa9d" />
+
+- Topic created: <img width="2880" height="1704" alt="Topic-created" src="https://github.com/user-attachments/assets/6d759d40-c4c9-47ec-a583-c7180fad140f" />
+
+- Function deployed successfully: <img width="2880" height="1704" alt="Function-deployed" src="https://github.com/user-attachments/assets/5a2afd0f-df06-4529-893c-1773aca35359" />
+
+- Browser response: <img width="2880" height="1704" alt="Browser-response" src="https://github.com/user-attachments/assets/51ff6b55-199b-4970-bfd8-5ce2edf566f7" />
+
+- Visitors records: <img width="2880" height="1704" alt="Visitor-records" src="https://github.com/user-attachments/assets/63e6ed4d-d70e-48be-bcfd-c83a2e36cca3" />
 
 ## What I Learned
+- Hosting the Website Using VM
 - Writing and deploying serverless Python functions
 - Creating and triggering HTTP Cloud Functions
 - Using Pub/Sub to log messages
 - GCP Logs Explorer & debugging
-- How services interconnect in GCP
-- A basic system to simulate backend event logging
+- Logging Visitor Activity with Pub/Sub
